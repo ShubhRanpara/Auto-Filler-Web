@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lung Cancer Patient Information Form</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="Lungcancer_Form.css" rel="stylesheet">
+    <script src="Lungcancer_Form.js"></script>
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <h2>Lung Cancer Patient Information Form</h2>
+        <input id="Autofill_Button" class="btn btn-primary" type="button" value="Autofill" onclick="Autofill()">
+        <form>
+            <!-- Personal Information -->
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter name">
+            </div>
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="text" class="form-control" id="age" placeholder="Enter age">
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" class="form-control" id="dob">
+            </div>
+            <div class="form-group">
+                <label>Gender:</label>
+                <div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" id="male" value="Male">
+                        <label class="form-check-label" for="male">Male</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" id="female" value="Female">
+                        <label class="form-check-label" for="female">Female</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" id="other" value="Other">
+                        <label class="form-check-label" for="other">Other</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="bloodGroup">Blood Group:</label>
+                <select class="form-control" id="bloodGroup">
+                    <option value="1">A+</option>
+                    <option value="2">A-</option>
+                    <option value="3">B+</option>
+                    <option value="4">B-</option>
+                    <option value="5">O+</option>
+                    <option value="6">O-</option>
+                    <option value="7">AB+</option>
+                    <option value="8">AB-</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="height">Height (cm):</label>
+                <input type="text" class="form-control" id="height" placeholder="Enter height">
+            </div>
+            <div class="form-group">
+                <label for="weight">Weight (kg):</label>
+                <input type="text" class="form-control" id="weight" placeholder="Enter weight">
+            </div>
+            <div class="form-group">
+                <label for="diagnosis">Diagnosis:</label>
+                <input type="text" class="form-control" id="diagnosis" placeholder="Enter diagnosis">
+            </div>
+            <div class="form-group">
+                <label for="followUpDate">Follow-up Date:</label>
+                <input type="date" class="form-control" id="followUpDate">
+            </div>
+            <div class="form-group">
+                <label for="operationDate">Operation Date:</label>
+                <input type="date" class="form-control" id="operationDate">
+            </div>
+            <div class="form-group">
+                <label>Medical History:</label>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="chronicsmoking">
+                    <label class="form-check-label" for="chronicsmoking">Chronic smoking history</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="familyHistory">
+                    <label class="form-check-label" for="familyHistory">Family history of lung cancer</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="emphysemaHistory">
+                    <label class="form-check-label" for="emphysemaHistory">Previous history of emphysema</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="additionalComments">Additional Comments:</label>
+                <textarea class="form-control" id="additionalComments" rows="3"></textarea>
+            </div>
+
+            <!-- Hospital Information -->
+            <h3>Hospital Information</h3>
+            <div class="form-group">
+                <label for="hospitalName">Hospital Name:</label>
+                <input type="text" class="form-control" id="hospitalName" placeholder="Enter hospital name">
+            </div>
+            <div class="form-group">
+                <label for="hospitalAddress">Hospital Address:</label>
+                <textarea class="form-control" id="hospitalAddress" rows="3"
+                    placeholder="Enter hospital address"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="doctorName">Doctor Name:</label>
+                <input type="text" class="form-control" id="doctorName" placeholder="Enter doctor's name">
+            </div>
+            <div class="form-group">
+                <label for="doctorSpecialization">Doctor Specialization:</label>
+                <input type="text" class="form-control" id="doctorSpecialization"
+                    placeholder="Enter doctor's specialization">
+            </div>
+
+            <!-- Medication Plan -->
+            <h3>Medication Plan</h3>
+            <div class="form-group">
+                <label for="medicationName1">Medication Name:</label>
+                <input type="text" class="form-control" id="medicationName1" placeholder="Enter medication name">
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="dosage1">Dosage (mg):</label>
+                    <input type="text" class="form-control" id="dosage1" placeholder="Enter dosage">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="frequency1">Frequency:</label>
+                    <input type="text" class="form-control" id="frequency1" placeholder="Enter frequency">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="startDate1">Start Date:</label>
+                    <input type="date" class="form-control" id="startDate1">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="endDate1">End Date:</label>
+                    <input type="date" class="form-control" id="endDate1">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="medicationName2">Medication Name:</label>
+                <input type="text" class="form-control" id="medicationName2" placeholder="Enter medication name">
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="dosage2">Dosage (mg):</label>
+                    <input type="text" class="form-control" id="dosage2" placeholder="Enter dosage">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="frequency2">Frequency:</label>
+                    <input type="text" class="form-control" id="frequency2" placeholder="Enter frequency">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="startDate2">Start Date:</label>
+                    <input type="date" class="form-control" id="startDate2">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="endDate2">End Date:</label>
+                    <input type="date" class="form-control" id="endDate2">
+                </div>
+            </div>
+                       
+            <!-- Vital Signs -->
+            <h3>Vital Signs</h3>
+            <div class="form-group">
+                <label for="bloodPressure">Blood Pressure:(mmHg)(Ex.120/80 mmHg)</label>
+                <input type="text" class="form-control" id="bloodPressure" placeholder="Enter blood pressure">
+            </div>
+            <div class="form-group">
+                <label for="heartRate">Heart Rate:(bpm)</label>
+                <input type="text" class="form-control" id="heartRate" placeholder="Enter heart rate">
+            </div>
+            <div class="form-group">
+                <label for="respiratoryRate">Respiratory Rate:(breaths/min)</label>
+                <input type="text" class="form-control" id="respiratoryRate" placeholder="Enter respiratory rate">
+            </div>
+            <div class="form-group">
+                <label for="temperature">Temperature:(°F)</label>
+                <input type="text" class="form-control" id="temperature" placeholder="Enter temperature">
+            </div>
+            <div class="form-group">
+                <label for="oxygenSaturation">Oxygen Saturation:(%)</label>
+                <input type="text" class="form-control" id="oxygenSaturation" placeholder="Enter oxygen saturation">
+            </div>
+
+            <!-- Laboratory Tests -->
+            <h3>Laboratory Tests</h3>
+            <div class="form-group">
+                <label for="tumorMarker">Tumor Marker (CEA)(ng/mL) (Normal range: &lt 3 ng/mL):</label>
+                <input type="text" class="form-control" id="tumorMarker" placeholder="Enter tumor marker (CEA)">
+            </div>
+            <div class="form-group">
+                <label for="EGFR">EGFR Mutation:</label>
+                <div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="EGFR" id="egpositive" value="Positive">
+                        <label class="form-check-label" for="positive">Positive</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="EGFR" id="egnegative" value="Negative">
+                        <label class="form-check-label" for="negative">Negative</label>
+                    </div>
+                </div>
+            
+            </div>
+            <div class="form-group">
+                <label for="ALK">ALK Rearrangement:</label>
+                <div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="ALK" id="apositive" value="Positive">
+                        <label class="form-check-label" for="positive">Positive</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="ALK" id="anegative" value="Negative">
+                        <label class="form-check-label" for="negative">Negative</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="KRAS">KRAS Mutation:</label>
+                <div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="KRAS" id="kpositive" value="Positive">
+                        <label class="form-check-label" for="positive">Positive</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="KRAS" id="knegative" value="Negative">
+                        <label class="form-check-label" for="negative">Negative</label>
+                    </div>
+                </div>
+            </div>
+
+            
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <!-- <script>
+    function Autofill() {
+        console.log("Clicked");
+        document.getElementById("Autofill_Button").innerHTML = "The form will be filled automatically..!!";
+    }
+    </script> -->
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

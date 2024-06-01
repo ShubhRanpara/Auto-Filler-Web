@@ -1,0 +1,17 @@
+#Autofill_Button {
+    color: lightblue;
+    font-size: large;
+    -webkit-text-fill-color: azure;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: auto;
+    padding: auto;
+    margin: 10px;
+}
+
+#Autofill_Button:active {
+    color: green;
+    width: auto;
+}
