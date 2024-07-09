@@ -41,6 +41,12 @@ python -m streamlit run app.py
 streamlit run app.py
 ```
 
+7. After opening the Streamlit web app, you can upload your PDF file and the LLM will generate the answers based on our predefined question set. These answers will be stored in a JSON file.
+
+8. Then you have to open the related form's HTML file and press the autofill button. This will automatically fill the form by fetching the answers from a JSON file by JavaScript. Please check out for missing values in the form and try to fill it manually.
+
+9. This was our automatic form filling web app that can help any medical organizatioin to fill the details of the patient in the form. I hope you like the efforts that we have put into this project.
+
 # Key errors faced while installation and running of the project :
 
 ## If any dependency is not working properly than update it with it's latest verson.
