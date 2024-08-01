@@ -29,7 +29,7 @@ virtualenv env
 pip install -r requirements.txt
 ```
 
-5. Add your HUGGINGFACEHUB_API_TOKEN in `.env` file and check the file name must be `.env` otherwise rename the file to `.env`.
+5. Add your HUGGINGFACEHUB_API_TOKEN in `.env` file and check the file name must be `.env` otherwise rename the file to `.env`. Also don't forget to update paths where it is mentioned.
 
 6. Once you have installed the required dependencies, you can run the project using Streamlit. Streamlit provides an easy way to create interactive web applications in Python.
 
@@ -43,9 +43,11 @@ streamlit run app.py
 
 7. After opening the Streamlit web app, you can upload your PDF file and the LLM will generate the answers based on our predefined question set. These answers will be stored in a JSON file.
 
-8. Then you have to open the related form's HTML file and press the autofill button. This will automatically fill the form by fetching the answers from a JSON file by JavaScript. Please check out for missing values in the form and try to fill it manually.
+8. Then you have to open the related form's HTML file in vs code and press go live on server.
 
-9. This was our automatic form filling web app that can help any medical organizatioin to fill the details of the patient in the form. I hope you like the efforts that we have put into this project.
+9. Then press the autofill button. This will automatically fill the form by fetching the answers from a JSON file by JavaScript. Please check out for missing values in the form and try to fill it manually.
+
+10. This was our automatic form filling web app that can help any medical organizatioin to fill the details of the patient in the form. I hope you like the efforts that we have put into this project.
 
 # Key errors faced while installation and running of the project :
 
